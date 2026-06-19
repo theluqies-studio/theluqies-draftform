@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Order - THE LUQIES</title>
+    <style>
+        /* Gaya Estetik Tema Earth Tone / Beige khas THE LUQIES */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f1eb;
+            color: #4a3e3d;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            background: #ffffff;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e8ded4;
+        }
+        h2 {
+            text-align: center;
+            color: #614e43;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            font-size: 14px;
+            color: #8c7669;
+            margin-bottom: 25px;
+        }
+        .section-title {
+            font-weight: bold;
+            border-bottom: 2px solid #e8ded4;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #7a6356;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 6px;
+            font-size: 14px;
+        }
+        input[type="text"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dcd1c4;
+            border-radius: 8px;
+            box-sizing: border-box;
+            background-color: #faf8f5;
+            color: #4a3e3d;
+            font-size: 14px;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #a89284;
+            background-color: #fff;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .btn-submit {
+            width: 100%;
+            background-color: #7a6356;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #5c4a3f;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>THE LUQIES</h2>
+    <div class="subtitle">Every thread, every dream; painted beautifully by THE LUQIES!</div>
+    
+    <form id="orderForm">
+        <div class="section-title">📋 DETAIL ORDER CUSTOM</div>
+        
+        <div class="form-group">
+            <label for="nama">Nama Lengkap :</label>
+            <input type="text" id="nama" required placeholder="Masukkan nama kamu">
+        </div>
+        
+        <div class="grid-2">
+            <div class="form-group">
+                <label for="jenisPakaian">Jenis Pakaian :</label>
+                <select id="jenisPakaian" required>
+                    <option value="">-- Pilih Jenis --</option>
+                    <option value="Blouse">Blouse</option>
+                    <option value="Kemeja">Kemeja</option>
+                    <option value="Kemeja Casual">Kemeja Casual</option>
+                    <option value="Vest">Vest</option>
+                    <option value="Outer">Outer</option>
+                    <option value="Lainnya">Lainnya (Tulis di detail)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="kategori">Kategori :</label>
+                <select id="kategori" required>
+                    <option value="Cewek">Cewek</option>
+                    <option value="Cowok">Cowok</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="bahanWarna">Jenis Bahan / Kain & Warna :</label>
+            <input type="text" id="bahanWarna" required placeholder="Contoh: Katun Toyobo warna Beige">
+        </div>
+
+        <div class="form-group">
+            <label for="manipulatingFabric">Detail / Hiasan (Manipulating Fabric) :</label>
+            <select id="manipulatingFabric" required>
+                <option value="Polos / Tanpa Hiasan">Polos / Tanpa Hiasan</option>
+                <option value="Layered">Layered</option>
+                <option value="Drape">Drape</option>
+                <option value="Tuck">Tuck</option>
+                <option value="Fold">Fold</option>
+                <option value="Knotted">Knotted</option>
+                <option value="Ruffle">Ruffle</option>
+                <option value="Custom Detail Lain">Custom Detail Lain (Tulis di Catatan)</option>
+            </select>
+        </div>
+
+        <div class="section-title">📏 DETAIL UKURAN (cm)</div>
+        <div class="grid-2">
+            <div class="form-group">
+                <label for="ld">Lingkar Dada (LD) :</label>
+                <input type="text" id="ld" placeholder="Contoh: 95">
+            </div>
+            <div class="form-group">
+                <label for="panjangBaju">Panjang Baju :</label>
+                <input type="text" id="panjangBaju" placeholder="Contoh: 65">
+            </div>
+        </div>
+        <div class="grid-2">
+            <div class="form-group">
+                <label for="panjangLengan">Panjang Lengan :</label>
+                <input type="text" id="panjangLengan" placeholder="Contoh: 55">
+            </div>
+            <div class="form-group">
+                <label for="jumlahPesan">Jumlah Pesan (Pcs) :</label>
+                <input type="text" id="jumlahPesan" required value="1">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="catatan">Catatan / Request Tambahan :</label>
+            <textarea id="catatan" rows="3" placeholder="Tambahkan detail kustom lain jika ada..."></textarea>
+        </div>
+
+        <div class="section-title">🚚 DATA PENGIRIMAN (CEK ONGKIR)</div>
+        <div class="form-group">
+            <label for="noTelp">No. Telefon / WhatsApp :</label>
+            <input type="tel" id="noTelp" required placeholder="Contoh: 081234567xxx">
+        </div>
+        <div class="grid-2">
+            <div class="form-group">
+                <label for="penerima">Nama Penerima Paket :</label>
+                <input type="text" id="penerima" required placeholder="Nama penerima">
+            </div>
+            <div class="form-group">
+                <label for="ekspedisi">Pilihan Ekspedisi :</label>
+                <input type="text" id="ekspedisi" placeholder="Contoh: J&T / JNE / Sicepat">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat Lengkap :</label>
+            <textarea id="alamat" rows="3" required placeholder="Tulis Jalan, RT/RW, No. Rumah, Kelurahan, Kecamatan, Kota/Kabupaten, Kode Pos"></textarea>
+        </div>
+
+        <button type="button" class="btn-submit" onclick="kirimKeWhatsApp()">Kirim Orderan ke WhatsApp ✨</button>
+    </form>
+</div>
+
+<script>
+function kirimKeWhatsApp() {
+    // 1. PENTING: Ganti nomor di bawah ini dengan nomor WhatsApp kamu (Gunakan kode negara, 62 di depan pengganti angka 0)
+    const nomorWhatsApp = "6285606688186"; 
+
+    // 2. Ambil data dari form input
+    const nama = document.getElementById('nama').value;
+    const jenisPakaian = document.getElementById('jenisPakaian').value;
+    const kategori = document.getElementById('kategori').value;
+    const bahanWarna = document.getElementById('bahanWarna').value;
+    const manipulatingFabric = document.getElementById('manipulatingFabric').value;
+    const ld = document.getElementById('ld').value || "-";
+    const panjangBaju = document.getElementById('panjangBaju').value || "-";
+    const panjangLengan = document.getElementById('panjangLengan').value || "-";
+    const jumlahPesan = document.getElementById('jumlahPesan').value;
+    const catatan = document.getElementById('catatan').value || "Tidak ada";
+    
+    const noTelp = document.getElementById('noTelp').value;
+    const penerima = document.getElementById('penerima').value;
+    const ekspedisi = document.getElementById('ekspedisi').value || "-";
+    const alamat = document.getElementById('alamat').value;
+
+    // Validasi form agar tidak ada data wajib yang kosong
+    if(!nama || !jenisPakaian || !bahanWarna || !noTelp || !penerima || !alamat) {
+        alert("Mohon lengkapi data yang wajib diisi terlebih dahulu ya!");
+        return;
+    }
+
+    // 3. Susun teks format orderan agar rapi saat masuk ke WA
+    let pesan = `*Silahkan isi format order :*\n`;
+    pesan += `Nama : ${nama}\n`;
+    pesan += `Jenis Pakaian : ${jenisPakaian}\n`;
+    pesan += `Kategori : ${kategori}\n`;
+    pesan += `Jenis bahan/kain & Warna : ${bahanWarna}\n`;
+    pesan += `Detail / Hiasan (Manipulating Fabric) : ${manipulatingFabric}\n`;
+    pesan += `Detail Ukuran :\n`;
+    pesan += ` - Lingkar Dada (LD) : ${ld} cm\n`;
+    pesan += ` - Panjang Baju : ${panjangBaju} cm\n`;
+    pesan += ` - Panjang Lengan : ${panjangLengan} cm\n`;
+    pesan += `Catatan Kustom : ${catatan}\n`;
+    pesan += `Jumlah Cetak/Pesan : ${jumlahPesan} pcs\n\n`;
+    
+    pesan += `*Cek Ongkir*\n`;
+    pesan += `Penerima : ${penerima}\n`;
+    pesan += `No Telfon : ${noTelp}\n`;
+    pesan += `Ekspedisi : ${ekspedisi}\n`;
+    pesan += `Alamat : ${alamat}\n\n`;
+    
+    pesan += `*NB*\n`;
+    pesan += `Proses pengerjaan dihitung setelah detail desain, ukuran, dan DP minimal 30% terkonfirmasi.\n\n`;
+    pesan += `Terimakasih 😊🙏\n`;
+    pesan += `_Your style, your clothes. Semua bisa dikustom!_`;
+
+    // 4. Proses encoding text agar terbaca sistem URL WhatsApp
+    const pesanEncoded = encodeURIComponent(pesan);
+
+    // 5. Alihkan atau buka WhatsApp Link otomatis
+    const urlWhatsApp = `https://api.whatsapp.com/send?phone=${nomorWhatsApp}&text=${pesanEncoded}`;
+    window.open(urlWhatsApp, '_blank');
+}
+</script>
+
+</body>
+</html>
